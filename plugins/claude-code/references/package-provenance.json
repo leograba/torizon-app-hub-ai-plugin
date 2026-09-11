@@ -1,0 +1,13 @@
+{
+  "canonicalManifest": "agent-plugins/torizon-app-hub/plugin.manifest.json",
+  "canonicalContracts": "agent-plugins/torizon-app-hub/mcp/schemas",
+  "adapterSource": "agent-plugins/torizon-app-hub/adapters/anthropic-claude-code/adapter.json",
+  "sourceFingerprint": "ee9915492433708767419c70f7452b274fe7f72ed3bc193060755c2a3d943332",
+  "generatedArtifacts": "build-only",
+  "networkAccess": false,
+  "externalValidator": {
+    "name": "claude plugin validate",
+    "status": "not-invoked",
+    "reason": "The Claude Code CLI is an external host validator; it is not installed implicitly by this repository build."
+  }
+}

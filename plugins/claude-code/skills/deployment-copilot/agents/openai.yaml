@@ -1,0 +1,7 @@
+interface:
+  display_name: "Deployment Copilot"
+  short_description: "Plan and safely monitor Torizon deployments"
+  default_prompt: "Use $deployment-copilot to plan a safe Torizon deployment."
+
+policy:
+  allow_implicit_invocation: true

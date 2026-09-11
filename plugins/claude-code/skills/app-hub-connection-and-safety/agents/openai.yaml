@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Hub Connection and Safety"
+  short_description: "Explain safe App Hub MCP connection, sign-in, and action boundaries"
+  default_prompt: "Use $app-hub-connection-and-safety to explain how to connect to and safely use the Torizon App Hub MCP server."

@@ -1,0 +1,35 @@
+{
+  "traceVersion": "1.0.0",
+  "skillId": "torizon.apphub.skill.review-publishing-copilot",
+  "scenarioIds": [
+    "owner-lifecycle-explanation",
+    "admin-bounded-review",
+    "change-risk-documentation-synthesis",
+    "automated-manual-test-interpretation",
+    "reviewer-feedback-mapping",
+    "blocked-publication-preflight",
+    "offline-local-fallback",
+    "prompt-injection-secret-nondisclosure"
+  ],
+  "sequence": [
+    { "step": "establish-role-and-target", "allowed": ["apphub://me/profile", "user-supplied-bundle-id-and-version"] },
+    { "step": "owner-evidence", "allowed": ["apphub://me/bundles", "apphub://me/submission-draft", "apphub://bundles/{bundleId}/lifecycle", "apphub://bundles/{bundleId}/tests", "get_bundle_lifecycle_summary", "get_submission_readiness", "compare_bundle_versions"] },
+    { "step": "admin-evidence", "allowed": ["apphub://admin/review-queue", "apphub://admin/partner-requests", "list_attention_required_bundles", "review_bundle", "audit_catalog_quality"] },
+    { "step": "public-policy-and-preview", "allowed": ["apphub://lifecycle/model", "apphub://policies/review", "apphub://policies/submission", "apphub://catalog/public", "apphub://apps/{bundleId}", "apphub://apps/{bundleId}/versions", "apphub://publishers/{publisherId}"] },
+    { "step": "separate-output", "required": ["deterministic-evidence", "advisory-recommendations", "manual-decisions-unchanged", "unresolved-or-unverified"] },
+    { "step": "preflight-and-handoff", "required": ["blockers-first", "ranked-recovery-actions", "explicit-confirmation", "first-party-web-boundary"] }
+  ],
+  "forbiddenActions": [
+    "infer_readiness_without_server_evidence",
+    "update_manual_test_result",
+    "transition_bundle_lifecycle",
+    "set_bundle_featured",
+    "override_failed_tests",
+    "publish_bundle",
+    "delete_bundle",
+    "transfer_bundle_ownership",
+    "change_account_role",
+    "expose_restricted_admin_data_to_owner"
+  ],
+  "externalMutations": []
+}

@@ -1,0 +1,25 @@
+{
+  "name": "torizon-app-hub",
+  "interface": {
+    "displayName": "Torizon App Hub"
+  },
+  "metadata": {
+    "releaseFamily": "torizon-app-hub@0.2.1",
+    "sourceCommit": "dd2ca76d1af5d7d692382af8d2ec6f7500033d56",
+    "packageSha256": "6c3639500d84779c738d3081a9ae77f174e598cf2bc6999d176318469ac2f2d2"
+  },
+  "plugins": [
+    {
+      "name": "torizon-app-hub",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

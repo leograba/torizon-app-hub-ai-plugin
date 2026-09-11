@@ -1,0 +1,40 @@
+{
+  "traceVersion": "1.0.0",
+  "description": "A hardware and configuration contraction is reported as a major-version recommendation without echoing bundle content.",
+  "input": {
+    "baseBundle": {
+      "schemaVersion": "2.0.0",
+      "compatibility": { "hardware": { "machineIds": ["verdin-imx8mm", "verdin-imx8mp"] } },
+      "bundle": {
+        "meta": { "id": "io.example.camera", "version": "1.2.0" },
+        "targets": {
+          "application": {
+            "configOverrides": {
+              "keys": { "logLevel": { "type": "list", "valuesList": ["debug", "info", "warn"] } }
+            }
+          }
+        }
+      }
+    },
+    "candidateBundle": {
+      "schemaVersion": "2.0.0",
+      "compatibility": { "hardware": { "machineIds": ["verdin-imx8mm"] } },
+      "bundle": {
+        "meta": { "id": "io.example.camera", "version": "2.0.0" },
+        "targets": {
+          "application": {
+            "configOverrides": {
+              "keys": { "logLevel": { "type": "list", "valuesList": ["info", "warn"] } }
+            }
+          }
+        }
+      }
+    },
+    "baseFiles": { "bundle.yaml": "[redacted]", "docker-compose.yml": "[redacted]" },
+    "candidateFiles": { "bundle.yaml": "[redacted]", "docker-compose.yml": "[redacted]" }
+  },
+  "expected": {
+    "version": { "relation": "higher", "recommendedIncrement": "major" },
+    "breakingCodes": ["hardware_support_removed", "configuration_value_removed"]
+  }
+}

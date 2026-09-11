@@ -1,0 +1,10 @@
+{
+  "fixtureVersion": "1.0.0",
+  "schemaVersion": "0.4.0",
+  "sequence": [
+    { "tool": "search_apps", "arguments": { "schemaVersion": "0.4.0", "query": "industrial monitoring", "sort": "relevance", "pageSize": 2 } },
+    { "rule": "Reuse nextCursor only with the same session, filters, sort, and page size; stop when hasMore is false." },
+    { "tool": "check_hardware_compatibility", "arguments": { "schemaVersion": "0.4.0", "bundleId": "selected-public-bundle", "hardwareIds": ["verdin-imx8mp"], "osVersion": "7.2.0" } }
+  ],
+  "externalMutations": []
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "torizon-app-hub-anthropic-claude-code",
+  "releaseProfileId": "source-implemented",
+  "sourceCommit": "dd2ca76d1af5d7d692382af8d2ec6f7500033d56",
+  "contractDigest": "1ac56f4a634794294ea9d5623ed62b467067f4d08048b10c07ff57b51985fcec",
+  "releaseProfileDigest": "15073587400ca5435273cfe6249ec944380a86363dace9ecd6d3e469481594c0",
+  "workspaceDirty": false,
+  "untrackedFiles": 0,
+  "cleanBoundary": "tracked-and-untracked",
+  "localConformance": "not-verified",
+  "evidenceRun": null,
+  "blocker": "immutable-test-evidence-not-supplied",
+  "deploymentVerified": false,
+  "modelHostVerified": false,
+  "marketplaceApproved": false,
+  "humanApproved": false
+}

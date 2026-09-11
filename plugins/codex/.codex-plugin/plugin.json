@@ -1,0 +1,30 @@
+{
+  "name": "torizon-app-hub",
+  "version": "0.2.1",
+  "description": "Portable Torizon App Hub discovery and local bundle workflows for Codex.",
+  "author": {
+    "name": "Torizon App Hub"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Torizon App Hub",
+    "brandColor": "#00508C",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "shortDescription": "Discover apps and build local Torizon bundles.",
+    "longDescription": "Use portable App Hub Skills for public discovery and local bundle workflows. The plugin configures the App Hub MCP server; delegated OAuth is still required before private App Hub access is available.",
+    "developerName": "Torizon App Hub",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Public discovery",
+      "Local bundle workflows",
+      "Remote App Hub MCP"
+    ],
+    "defaultPrompt": [
+      "Find a Torizon App Hub application for my project.",
+      "Compare App Hub applications for my hardware.",
+      "Build and validate a local App Hub bundle."
+    ]
+  }
+}

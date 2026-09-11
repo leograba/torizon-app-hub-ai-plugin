@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review & Publishing Copilot"
+  short_description: "Review App Hub bundles for publication"
+  default_prompt: "Use $review-publishing-copilot to review an App Hub bundle and prepare a publication preflight."

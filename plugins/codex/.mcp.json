@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "torizon-app-hub": {
+      "type": "http",
+      "url": "https://tznapphub.link/mcp",
+      "oauth": {
+        "clientId": "22vrgluookvfcsip1rl9gib7tg",
+        "callbackUrl": "http://127.0.0.1:8766/callback/NDz4cGYa3ZJc",
+        "callbackPort": 8766
+      },
+      "scopes": [
+        "https://tznapphub.link/mcp/apphub.account.read",
+        "https://tznapphub.link/mcp/apphub.bundles.read",
+        "https://tznapphub.link/mcp/apphub.bundles.write",
+        "https://tznapphub.link/mcp/apphub.catalog.audit",
+        "https://tznapphub.link/mcp/apphub.deployments.read",
+        "https://tznapphub.link/mcp/apphub.deployments.write",
+        "https://tznapphub.link/mcp/apphub.devices.read",
+        "https://tznapphub.link/mcp/apphub.drafts.write",
+        "https://tznapphub.link/mcp/apphub.partner-requests.write",
+        "https://tznapphub.link/mcp/apphub.preferences.write",
+        "https://tznapphub.link/mcp/apphub.review.read",
+        "https://tznapphub.link/mcp/apphub.review.write",
+        "https://tznapphub.link/mcp/apphub.stars.write",
+        "https://tznapphub.link/mcp/apphub.submissions.read",
+        "https://tznapphub.link/mcp/apphub.submissions.write"
+      ]
+    }
+  }
+}

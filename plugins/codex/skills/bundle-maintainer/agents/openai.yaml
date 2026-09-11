@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bundle Maintainer"
+  short_description: "Version and safely update App Hub bundles"
+  default_prompt: "Use $bundle-maintainer to compare, update, validate, and prepare a confirmed edit for an existing Torizon App Hub bundle."

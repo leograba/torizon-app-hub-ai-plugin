@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Discovery Advisor"
+  short_description: "Find and compare public App Hub applications"
+  default_prompt: "Use $app-discovery-advisor to find and compare Torizon App Hub applications for my project."

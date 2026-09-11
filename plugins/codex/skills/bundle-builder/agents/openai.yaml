@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bundle Builder"
+  short_description: "Create and validate Torizon App Hub bundles"
+  default_prompt: "Use $bundle-builder to create or repair a Torizon App Hub bundle in this workspace."

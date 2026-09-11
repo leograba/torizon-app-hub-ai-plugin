@@ -1,0 +1,36 @@
+{
+  "traceVersion": "1.0.0",
+  "skillId": "torizon.apphub.skill.ecosystem-operations",
+  "scenarioIds": [
+    "admin-queue-triage",
+    "partner-request-restricted-projection",
+    "stalled-degraded-discovery",
+    "catalog-audit-bounded",
+    "hardware-use-case-coverage",
+    "aggregate-analytics-privacy",
+    "featured-recommendation-no-mutation",
+    "accreditation-evidence-gap",
+    "operational-status-report"
+  ],
+  "sequence": [
+    { "step": "establish-admin-context-and-report-scope", "allowed": ["apphub://me/profile", "user-supplied-report-filters"] },
+    { "step": "collect-bounded-admin-evidence", "allowed": ["apphub://admin/review-queue", "apphub://admin/partner-requests", "list_attention_required_bundles", "review_bundle", "audit_catalog_quality"] },
+    { "step": "collect-public-aggregate-evidence", "allowed": ["apphub://catalog/public", "apphub://catalog/featured", "apphub://apps/{bundleId}", "apphub://apps/{bundleId}/versions", "apphub://apps/{bundleId}/artifacts", "apphub://publishers/{publisherId}", "apphub://hardware/catalog", "apphub://tags"] },
+    { "step": "classify-evidence-and-recommendations", "allowed": ["deterministic-evidence", "advisory-recommendations", "manual-decisions-unchanged", "unresolved-or-unverified"] },
+    { "step": "prepare-human-recovery", "allowed": ["ranked-recovery-actions", "first-party-web-navigation"] }
+  ],
+  "forbiddenActions": [
+    "read_without_admin_authorization",
+    "expose_restricted_admin_data_to_owner",
+    "read_partner_contact_data",
+    "query_user_level_analytics",
+    "set_bundle_featured",
+    "update_manual_test_result",
+    "transition_lifecycle",
+    "publish_bundle",
+    "call_get_submission_readiness",
+    "run_untrusted_command",
+    "request_client_secret"
+  ],
+  "externalMutations": []
+}

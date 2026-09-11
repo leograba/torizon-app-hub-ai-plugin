@@ -1,0 +1,496 @@
+{
+  "contractVersion": "0.4.0",
+  "capabilities": [
+    {
+      "id": "torizon.apphub.bundle.build",
+      "name": "Build and validate a local App Bundle",
+      "status": "experimental",
+      "surfaces": [
+        "skills"
+      ],
+      "risk": "personal-reversible",
+      "dataClasses": [
+        "Sensitive"
+      ],
+      "requires": {
+        "authContext": "anonymous",
+        "mcp": false,
+        "scopes": []
+      },
+      "confirmation": "notice",
+      "fallback": {
+        "mode": "offline",
+        "behavior": "Create and validate local bundle files using compatible packaged resources; request separate consent before Git mutations or remote validation.",
+        "requiresCompatibleSnapshot": true,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.bundle.maintain",
+      "name": "Maintain and version an App Bundle",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp"
+      ],
+      "risk": "personal-reversible",
+      "dataClasses": [
+        "Sensitive"
+      ],
+      "requires": {
+        "authContext": "owner",
+        "mcp": true,
+        "scopes": [
+          "apphub.bundles.read"
+        ]
+      },
+      "confirmation": "notice",
+      "fallback": {
+        "mode": "offline",
+        "behavior": "Review and prepare local changes without live ownership or lifecycle state; preserve Git consent and unrelated work rules.",
+        "requiresCompatibleSnapshot": true,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.bundle.validate-public-source",
+      "name": "Validate an attested public-source bundle workspace",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Sensitive"
+      ],
+      "requires": {
+        "authContext": "anonymous",
+        "mcp": true,
+        "scopes": []
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "offline",
+        "behavior": "Prefer the packaged validator. Remote validation accepts only exact selected files covered by a short-lived client attestation and does not prove human consent.",
+        "requiresCompatibleSnapshot": true,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.critical.prepare-handoff",
+      "name": "Prepare critical web handoffs",
+      "status": "experimental",
+      "surfaces": [
+        "mcp",
+        "prompts"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Restricted"
+      ],
+      "requires": {
+        "authContext": "admin",
+        "mcp": true,
+        "scopes": [
+          "apphub.review.read"
+        ]
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "unavailable",
+        "behavior": "Critical actions remain available only in the first-party App Hub web experience.",
+        "requiresCompatibleSnapshot": false,
+        "staleDataDisclosure": false
+      }
+    },
+    {
+      "id": "torizon.apphub.deployment.preflight",
+      "name": "Prepare a deployment preflight",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp",
+        "prompts"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Sensitive"
+      ],
+      "requires": {
+        "authContext": "apphub-user",
+        "mcp": true,
+        "scopes": [
+          "apphub.account.read",
+          "apphub.devices.read",
+          "apphub.deployments.read"
+        ]
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "text-only",
+        "behavior": "Explain deployment prerequisites without reading account, device, or current deployment state.",
+        "requiresCompatibleSnapshot": false,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.deployment.start",
+      "name": "Start a confirmed deployment",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp"
+      ],
+      "risk": "operational",
+      "dataClasses": [
+        "Sensitive"
+      ],
+      "requires": {
+        "authContext": "apphub-user",
+        "mcp": true,
+        "scopes": [
+          "apphub.deployments.write"
+        ]
+      },
+      "confirmation": "explicit-preview",
+      "fallback": {
+        "mode": "unavailable",
+        "behavior": "Do not start or simulate a deployment without live authorization and current server-side checks.",
+        "requiresCompatibleSnapshot": false,
+        "staleDataDisclosure": false
+      }
+    },
+    {
+      "id": "torizon.apphub.deployment.status",
+      "name": "Monitor a deployment",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Sensitive"
+      ],
+      "requires": {
+        "authContext": "apphub-user",
+        "mcp": true,
+        "scopes": [
+          "apphub.deployments.read"
+        ]
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "text-only",
+        "behavior": "Explain deployment status without claiming current device progress when live authorization is unavailable.",
+        "requiresCompatibleSnapshot": false,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.discovery.check-hardware-compatibility",
+      "name": "Check hardware compatibility",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Public"
+      ],
+      "requires": {
+        "authContext": "anonymous",
+        "mcp": true,
+        "scopes": []
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "text-only",
+        "behavior": "Explain required hardware and OS inputs without claiming a live compatibility result.",
+        "requiresCompatibleSnapshot": true,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.discovery.compare-apps",
+      "name": "Compare applications",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp",
+        "prompts"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Public"
+      ],
+      "requires": {
+        "authContext": "anonymous",
+        "mcp": true,
+        "scopes": []
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "text-only",
+        "behavior": "Describe comparison dimensions without inventing current versions or compatibility facts.",
+        "requiresCompatibleSnapshot": true,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.discovery.recommend-apps",
+      "name": "Recommend applications for a use case",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Public"
+      ],
+      "requires": {
+        "authContext": "anonymous",
+        "mcp": true,
+        "scopes": []
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "text-only",
+        "behavior": "Explain recommendation criteria and limitations without current catalog evidence.",
+        "requiresCompatibleSnapshot": true,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.discovery.search-apps",
+      "name": "Search App Hub applications",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Public"
+      ],
+      "requires": {
+        "authContext": "anonymous",
+        "mcp": true,
+        "scopes": []
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "offline",
+        "behavior": "Explain discovery using packaged public guidance without claiming current catalog results.",
+        "requiresCompatibleSnapshot": true,
+        "staleDataDisclosure": true
+      }
+    },
+    {
+      "id": "torizon.apphub.operations.audit-catalog",
+      "name": "Audit catalog quality",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Restricted"
+      ],
+      "requires": {
+        "authContext": "admin",
+        "mcp": true,
+        "scopes": [
+          "apphub.catalog.audit"
+        ]
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "unavailable",
+        "behavior": "Do not infer private catalog quality or administrative findings without current authorized data.",
+        "requiresCompatibleSnapshot": false,
+        "staleDataDisclosure": false
+      }
+    },
+    {
+      "id": "torizon.apphub.review.manage-operations",
+      "name": "Manage permitted review operations",
+      "status": "experimental",
+      "surfaces": [
+        "mcp"
+      ],
+      "risk": "operational",
+      "dataClasses": [
+        "Sensitive",
+        "Restricted"
+      ],
+      "requires": {
+        "authContext": "apphub-user",
+        "mcp": true,
+        "scopes": [
+          "apphub.bundles.write",
+          "apphub.review.write"
+        ]
+      },
+      "confirmation": "explicit-preview",
+      "fallback": {
+        "mode": "unavailable",
+        "behavior": "Do not claim or perform a lifecycle, manual-test, or featured update without live backend authorization, a current preview, and explicit confirmation.",
+        "requiresCompatibleSnapshot": false,
+        "staleDataDisclosure": false
+      }
+    },
+    {
+      "id": "torizon.apphub.review.prepare-publication",
+      "name": "Prepare a publication review",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp",
+        "prompts"
+      ],
+      "risk": "critical",
+      "dataClasses": [
+        "Restricted"
+      ],
+      "requires": {
+        "authContext": "admin",
+        "mcp": true,
+        "scopes": [
+          "apphub.review.read"
+        ]
+      },
+      "confirmation": "first-party-web",
+      "fallback": {
+        "mode": "unavailable",
+        "behavior": "Prepare evidence only when authorized; final publication remains a first-party App Hub web handoff.",
+        "requiresCompatibleSnapshot": false,
+        "staleDataDisclosure": false
+      }
+    },
+    {
+      "id": "torizon.apphub.review.request-partnership",
+      "name": "Prepare a partner request handoff",
+      "status": "experimental",
+      "surfaces": [
+        "mcp"
+      ],
+      "risk": "operational",
+      "dataClasses": [
+        "Sensitive"
+      ],
+      "requires": {
+        "authContext": "apphub-user",
+        "mcp": true,
+        "scopes": [
+          "apphub.partner-requests.write"
+        ]
+      },
+      "confirmation": "explicit-preview",
+      "fallback": {
+        "mode": "unavailable",
+        "behavior": "Prepare a first-party App Hub partner request form only after user confirmation; final submission and notification remain in App Hub web.",
+        "requiresCompatibleSnapshot": false,
+        "staleDataDisclosure": false
+      }
+    },
+    {
+      "id": "torizon.apphub.review.submission-readiness",
+      "name": "Explain submission readiness",
+      "status": "experimental",
+      "surfaces": [
+        "skills",
+        "mcp",
+        "prompts"
+      ],
+      "risk": "read",
+      "dataClasses": [
+        "Sensitive"
+      ],
+      "requires": {
+        "authContext": "owner",
+        "mcp": true,
+        "scopes": [
+          "apphub.submissions.read"
+        ]
+      },
+      "confirmation": "none",
+      "fallback": {
+        "mode": "text-only",
+        "behavior": "Explain local readiness criteria without claiming current server-side test or review state.",
+        "requiresCompatibleSnapshot": true,
+        "staleDataDisclosure": true
+      }
+    }
+  ],
+  "includedSkills": [
+    {
+      "id": "torizon.apphub.skill.app-discovery-advisor",
+      "name": "App Discovery Advisor",
+      "sourcePath": "skills/app-discovery-advisor",
+      "capabilityIds": [
+        "torizon.apphub.discovery.search-apps",
+        "torizon.apphub.discovery.recommend-apps",
+        "torizon.apphub.discovery.compare-apps",
+        "torizon.apphub.discovery.check-hardware-compatibility"
+      ]
+    },
+    {
+      "id": "torizon.apphub.skill.deployment-copilot",
+      "name": "Deployment Copilot",
+      "sourcePath": "skills/deployment-copilot",
+      "capabilityIds": [
+        "torizon.apphub.deployment.preflight",
+        "torizon.apphub.deployment.start",
+        "torizon.apphub.deployment.status"
+      ]
+    },
+    {
+      "id": "torizon.apphub.skill.bundle-builder",
+      "name": "Bundle Builder",
+      "sourcePath": "skills/bundle-builder",
+      "capabilityIds": [
+        "torizon.apphub.bundle.build"
+      ]
+    },
+    {
+      "id": "torizon.apphub.skill.bundle-maintainer",
+      "name": "Bundle Maintainer",
+      "sourcePath": "skills/bundle-maintainer",
+      "capabilityIds": [
+        "torizon.apphub.bundle.maintain"
+      ]
+    },
+    {
+      "id": "torizon.apphub.skill.review-publishing-copilot",
+      "name": "Review and Publishing Copilot",
+      "sourcePath": "skills/review-publishing-copilot",
+      "capabilityIds": [
+        "torizon.apphub.review.submission-readiness",
+        "torizon.apphub.review.prepare-publication"
+      ]
+    },
+    {
+      "id": "torizon.apphub.skill.ecosystem-operations",
+      "name": "Ecosystem Operations",
+      "sourcePath": "skills/ecosystem-operations",
+      "capabilityIds": [
+        "torizon.apphub.operations.audit-catalog"
+      ]
+    },
+    {
+      "id": "torizon.apphub.skill.app-hub-connection-and-safety",
+      "name": "App Hub Connection and Safety",
+      "sourcePath": "skills/app-hub-connection-and-safety",
+      "capabilityIds": [
+        "torizon.apphub.critical.prepare-handoff",
+        "torizon.apphub.deployment.status"
+      ]
+    }
+  ],
+  "excludedSkills": []
+}

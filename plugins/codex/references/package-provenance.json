@@ -1,0 +1,13 @@
+{
+  "canonicalManifest": "agent-plugins/torizon-app-hub/plugin.manifest.json",
+  "canonicalContracts": "agent-plugins/torizon-app-hub/mcp/schemas",
+  "adapterSource": "agent-plugins/torizon-app-hub/adapters/openai-codex/adapter.json",
+  "sourceFingerprint": "7160fc823ed018a708579184cb68d490e9bdc4ae771608f4b6d4118ea3f32d79",
+  "generatedArtifacts": "build-only",
+  "networkAccess": false,
+  "externalValidator": {
+    "name": "skills-ref",
+    "status": "not-invoked",
+    "reason": "The external reference validator is not a package dependency; provide it explicitly for supplemental validation."
+  }
+}

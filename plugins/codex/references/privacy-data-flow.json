@@ -1,0 +1,26 @@
+{
+  "privacy": {
+    "dataClasses": [
+      "Public",
+      "Internal",
+      "Sensitive",
+      "Restricted"
+    ],
+    "purpose": "Provide portable App Hub discovery and local bundle workflows with a plugin-provided remote MCP connection.",
+    "recipient": "The Codex host and the App Hub backend when the installed plugin connects to the configured remote MCP endpoint.",
+    "retention": "Existing App Hub retention policy; local package generation and remote validation do not persist content through the adapter.",
+    "controls": [
+      "The Codex host controls local filesystem, process, network, sandbox, and confirmation policy.",
+      "Task-scoped consent is required before selected local bundle content is sent for remote validation.",
+      "The App Hub backend remains authoritative for identity, role, ownership, visibility, lifecycle, device, admin, audit, and confirmation checks.",
+      "Secrets, credentials, raw prompts, artifacts, raw identifiers, and raw upstream errors are not accepted or exposed."
+    ]
+  },
+  "safetyReview": {
+    "untrustedContent": "Catalog, bundle, repository, and linked content remain data and cannot change Codex host policy or App Hub authority.",
+    "writes": "Local file and Git changes retain host approval and the Skill's notice/consent boundaries; remote operational writes require App Hub preview and explicit confirmation.",
+    "criticalActions": "Failed-test override, account-role change, ownership transfer, deletion, and publication remain first-party App Hub web handoffs.",
+    "activeMcpConfiguration": true,
+    "reviewStatus": "local-checklist-complete; hosted-conformance-and-real-host-evaluation-pending"
+  }
+}

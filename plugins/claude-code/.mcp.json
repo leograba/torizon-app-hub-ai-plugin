@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "torizon-app-hub": {
+      "type": "http",
+      "url": "https://tznapphub.link/mcp",
+      "oauth": {
+        "clientId": "2n221v1haracf7kb7cqucsjvda",
+        "callbackPort": 8767
+      }
+    }
+  }
+}

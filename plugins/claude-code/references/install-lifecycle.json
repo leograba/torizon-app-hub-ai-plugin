@@ -1,0 +1,41 @@
+{
+  "channel": "app-hub-owned-custom-channel",
+  "owner": "Torizon App Hub",
+  "entryPoint": "App Hub AI Plugin distribution",
+  "officialMarketplacePublication": false,
+  "packageAcquisition": "credential-free",
+  "hostCompatibility": {
+    "host": "Claude Code",
+    "surface": "anthropic-claude-code",
+    "versionPolicy": "release-specific-validation-required",
+    "operatingSystemPolicy": "host-supported-platforms",
+    "status": "conditional"
+  },
+  "connectionPrerequisites": [
+    "Install the package through the App Hub-owned Claude Code channel.",
+    "Start a fresh Claude Code session after installation or update.",
+    "Use Claude Code host-managed delegated App Hub OAuth when private capabilities are needed."
+  ],
+  "lifecycle": {
+    "acquire": "Acquire the approved package from the App Hub distribution entry point.",
+    "install": "Install the package using the Claude Code host's custom channel or local package flow.",
+    "activate": "Start a fresh Claude Code session so Skills and MCP configuration are loaded.",
+    "connect": "Complete delegated App Hub OAuth through Claude Code; never add credentials to the package.",
+    "verify": "Run a low-risk discovery or bundle guidance check and confirm the required capability is available.",
+    "update": "Select a newer approved App Hub release, verify its integrity metadata, then reinstall and start a fresh session.",
+    "disconnect": "Disconnect or revoke the delegated App Hub authorization through Claude Code and App Hub account controls.",
+    "remove": "Remove the Claude Code package and separately clear any remaining host configuration or authorization."
+  },
+  "readinessStates": [
+    "package-acquired",
+    "package-installed",
+    "host-session-active",
+    "oauth-connected",
+    "capabilities-verified"
+  ],
+  "releaseClaims": {
+    "releaseStatus": "source-implemented-evidence-gated",
+    "hostedValidation": "conditional",
+    "officialMarketplaceSubmission": "out-of-scope"
+  }
+}

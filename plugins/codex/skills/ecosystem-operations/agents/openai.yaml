@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ecosystem Operations"
+  short_description: "Analyze App Hub ecosystem operations"
+  default_prompt: "Use $ecosystem-operations to prepare a privacy-safe App Hub ecosystem operations report."

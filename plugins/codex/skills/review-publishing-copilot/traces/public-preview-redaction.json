@@ -1,0 +1,55 @@
+{
+  "traceVersion": "1.0.0",
+  "skillId": "torizon.apphub.skill.review-publishing-copilot",
+  "scenarioIds": ["public-preview-redaction", "explicit-web-handoff-confirmation"],
+  "sequence": [
+    { "step": "read-public-representation", "allowed": ["apphub://catalog/public", "apphub://apps/{bundleId}", "apphub://apps/{bundleId}/versions", "apphub://publishers/{publisherId}"] },
+    { "step": "sanitize-candidate", "required": ["public-allowlist", "draft-not-live-label", "restricted-field-omission"] },
+    { "step": "confirm-web-boundary", "required": ["explicit-confirmation", "first-party-web-only"] }
+  ],
+  "forbiddenActions": ["include_restricted_field", "claim_candidate_is_published", "direct_mcp_mutation"],
+  "externalMutations": [],
+  "input": {
+    "publishedPublicFields": ["bundleId", "name", "version", "summary", "publisher.displayName", "supportedHardwareIds"],
+    "candidateState": "submitted",
+    "candidateSource": "owner-draft"
+  },
+  "publicAllowlist": [
+    "bundleId",
+    "name",
+    "version",
+    "summary",
+    "tags",
+    "supportedHardwareIds",
+    "publicCompatibilityNotes",
+    "publicLifecycle",
+    "installable",
+    "changelogUrl",
+    "publisher.displayName",
+    "publisher.website",
+    "publisher.trustSignals",
+    "artifact.kind",
+    "artifact.name",
+    "artifact.sizeBytes",
+    "artifact.sha256"
+  ],
+  "forbiddenFields": [
+    "ownerSubjectHash",
+    "contactEmail",
+    "privateNotes",
+    "adminAttention",
+    "reviewerIdentity",
+    "rawSource",
+    "storageKey",
+    "clientSecret",
+    "accessToken",
+    "draftPayload"
+  ],
+  "expected": {
+    "candidateLabel": "Draft — not live",
+    "publishedClaim": false,
+    "handoff": "first-party-web-only",
+    "contentTransferred": false,
+    "externalMutations": []
+  }
+}

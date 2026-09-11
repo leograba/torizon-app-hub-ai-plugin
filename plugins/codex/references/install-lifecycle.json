@@ -1,0 +1,41 @@
+{
+  "channel": "app-hub-owned-custom-channel",
+  "owner": "Torizon App Hub",
+  "entryPoint": "App Hub AI Plugin distribution",
+  "officialMarketplacePublication": false,
+  "packageAcquisition": "credential-free",
+  "hostCompatibility": {
+    "host": "Codex",
+    "surface": "openai-codex",
+    "versionPolicy": "release-specific-validation-required",
+    "operatingSystemPolicy": "host-supported-platforms",
+    "status": "conditional"
+  },
+  "connectionPrerequisites": [
+    "Install the package through the App Hub-owned Codex channel.",
+    "Start a fresh Codex session after installation or update.",
+    "Use Codex host-managed delegated App Hub OAuth when private capabilities are needed."
+  ],
+  "lifecycle": {
+    "acquire": "Acquire the approved package from the App Hub distribution entry point.",
+    "install": "Install the package using the Codex host's custom channel or local package flow.",
+    "activate": "Start a fresh Codex session so Skills and MCP configuration are loaded.",
+    "connect": "Complete delegated App Hub OAuth through the Codex host; never add credentials to the package.",
+    "verify": "Run a low-risk discovery or bundle guidance check and confirm the required capability is available.",
+    "update": "Select a newer approved App Hub release, verify its integrity metadata, then reinstall and start a fresh session.",
+    "disconnect": "Disconnect or revoke the delegated App Hub authorization through Codex and App Hub account controls.",
+    "remove": "Remove the Codex package and separately clear any remaining host configuration or authorization."
+  },
+  "readinessStates": [
+    "package-acquired",
+    "package-installed",
+    "host-session-active",
+    "oauth-connected",
+    "capabilities-verified"
+  ],
+  "releaseClaims": {
+    "releaseStatus": "source-implemented-evidence-gated",
+    "hostedValidation": "conditional",
+    "officialMarketplaceSubmission": "out-of-scope"
+  }
+}
