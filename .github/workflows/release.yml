@@ -1,0 +1,92 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Check out tagged commit
+        uses: actions/checkout@v4
+
+      - name: Derive version and verify release.json
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          VERSION="${TAG#v}"
+          echo "TAG=${TAG}" >> "$GITHUB_ENV"
+          echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
+
+          RELEASE_JSON="releases/${VERSION}/release.json"
+          if [ ! -f "$RELEASE_JSON" ]; then
+            echo "::error::release.json check failed: ${RELEASE_JSON} not found for tag ${TAG}"
+            exit 1
+          fi
+
+          JSON_VERSION="$(jq -r '.release.version' "$RELEASE_JSON")"
+          if [ "$JSON_VERSION" != "$VERSION" ]; then
+            echo "::error::release.json check failed: release.version (${JSON_VERSION}) in ${RELEASE_JSON} does not match tag-derived version (${VERSION})"
+            exit 1
+          fi
+
+      - name: Verify SHA256SUMS
+        run: |
+          set -euo pipefail
+          cd "releases/${VERSION}"
+          if ! sha256sum -c SHA256SUMS; then
+            echo "::error::SHA256SUMS check failed: one or more files under releases/${VERSION} do not match their recorded checksum"
+            exit 1
+          fi
+
+      - name: Verify packaged assets match committed plugin trees
+        run: |
+          set -euo pipefail
+          for host in codex claude-code; do
+            tmp_dir="$(mktemp -d)"
+            unzip -q "releases/${VERSION}/assets/${host}.zip" -d "$tmp_dir"
+            if ! diff -r "$tmp_dir" "plugins/${host}"; then
+              echo "::error::asset tree check failed: releases/${VERSION}/assets/${host}.zip does not match plugins/${host}"
+              exit 1
+            fi
+            rm -rf "$tmp_dir"
+          done
+
+      - name: Generate release notes
+        run: |
+          set -euo pipefail
+          RELEASE_JSON="releases/${VERSION}/release.json"
+          FAMILY="$(jq -r '.release.family' "$RELEASE_JSON")"
+          SOURCE_COMMIT="$(jq -r '.release.sourceCommit' "$RELEASE_JSON")"
+
+          {
+            echo "## Torizon App Hub AI Plugin ${VERSION}"
+            echo
+            echo "- Release family: ${FAMILY}"
+            echo "- Source commit: ${SOURCE_COMMIT}"
+            echo
+            echo "### Asset checksums (SHA-256)"
+            jq -r '.artifacts[] | "- `\(.path)`: `\(.sha256)`"' "$RELEASE_JSON"
+          } > release-notes.md
+
+      - name: Create GitHub Release
+        run: |
+          set -euo pipefail
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            echo "::error::release creation check failed: a release for tag ${TAG} already exists"
+            exit 1
+          fi
+
+          gh release create "${TAG}" \
+            "releases/${VERSION}/assets/codex.zip" \
+            "releases/${VERSION}/assets/claude-code.zip" \
+            "releases/${VERSION}/assets/generic.zip" \
+            --title "Torizon App Hub AI Plugin ${VERSION}" \
+            --notes-file release-notes.md

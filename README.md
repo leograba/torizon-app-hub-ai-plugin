@@ -24,6 +24,19 @@ default-branch snapshot, and do not add a second standalone App Hub MCP entry.
 After installation, start a fresh host session. OAuth is host-managed and is a
 separate step from package installation.
 
+## Releases
+
+GitHub Releases in this repository are created only by the tag-triggered
+[`release.yml`](.github/workflows/release.yml) workflow, never by hand. On
+each pushed `v<version>` tag, the workflow verifies the committed tree before
+publishing anything: the staged `releases/<version>/release.json` version
+matches the tag, `SHA256SUMS` verifies every listed file, and each unpacked
+host package archive matches the corresponding `plugins/<host>` tree. Any
+mismatch fails the workflow closed with no release created. Maintainers
+publish a new release by pushing the version tag; the workflow then creates
+the GitHub Release with the Codex, Claude Code, and generic assets and notes
+generated from `release.json`.
+
 ## Release verification
 
 Each release under `releases/<version>/` contains the generated package assets,
