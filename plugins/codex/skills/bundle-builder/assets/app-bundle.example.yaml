@@ -1,18 +1,7 @@
 # Full field reference and documentation: see /docs/bundlespec in the App Hub.
 #
 # Schema version — identifies the bundle.yaml format version.
-schemaVersion: "2.0.0"
-
-# Publisher contact metadata shown in cards/details and used for support.
-publisher:
-  # Public name of the app publisher.
-  name: "Acme Vision Ltd."
-  # Main website for this publisher.
-  website: "https://acmevision.example"
-  # Support contact email.
-  contactEmail: "support@acmevision.example"
-  # URL where users can request support.
-  supportUrl: "https://acmevision.example/support"
+schemaVersion: "3.0.0"
 
 # Hardware and optional OS compatibility declarations.
 compatibility:

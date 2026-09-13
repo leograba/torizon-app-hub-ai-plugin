@@ -1,7 +1,7 @@
 {
   "name": "torizon-app-hub",
   "displayName": "Torizon App Hub",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Torizon App Hub Skills and hosted MCP workflows for Claude Code.",
   "author": {
     "name": "Torizon App Hub"

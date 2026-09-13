@@ -1,0 +1,9 @@
+{
+  "status": "not-signed",
+  "algorithm": null,
+  "keyId": null,
+  "payload": "evidence/provenance.intoto.json",
+  "publicKeySpki": null,
+  "signature": null,
+  "blocker": "operator-signing-key-not-supplied"
+}

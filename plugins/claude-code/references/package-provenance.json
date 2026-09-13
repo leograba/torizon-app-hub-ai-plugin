@@ -2,7 +2,7 @@
   "canonicalManifest": "agent-plugins/torizon-app-hub/plugin.manifest.json",
   "canonicalContracts": "agent-plugins/torizon-app-hub/mcp/schemas",
   "adapterSource": "agent-plugins/torizon-app-hub/adapters/anthropic-claude-code/adapter.json",
-  "sourceFingerprint": "ee9915492433708767419c70f7452b274fe7f72ed3bc193060755c2a3d943332",
+  "sourceFingerprint": "18caee9851aa30f67b73519b63d6a48523a5cbc733925c1ea910f10ef8f036f0",
   "generatedArtifacts": "build-only",
   "networkAccess": false,
   "externalValidator": {

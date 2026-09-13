@@ -2,25 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$title": "Torizon App Hub Bundle (bundle.yaml)",
   "type": "object",
-  "required": ["schemaVersion", "publisher", "compatibility", "bundle"],
+  "required": ["schemaVersion", "compatibility", "bundle"],
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {
       "type": "string",
       "description": "Version of the bundle.yaml schema format.",
-      "pattern": "^2\\.\\d+\\.\\d+$"
-    },
-    "publisher": {
-      "type": "object",
-      "description": "Publisher metadata shown in app discovery and support surfaces.",
-      "additionalProperties": false,
-      "required": ["name", "website", "contactEmail", "supportUrl"],
-      "properties": {
-        "name": { "type": "string", "minLength": 1, "description": "Publisher or company display name." },
-        "website": { "type": "string", "format": "uri", "description": "Publisher website URL." },
-        "contactEmail": { "type": "string", "format": "email", "description": "Primary support contact email." },
-        "supportUrl": { "type": "string", "format": "uri", "description": "Support page URL for users." }
-      }
+      "pattern": "^3\\.\\d+\\.\\d+$"
     },
     "compatibility": {
       "type": "object",

@@ -1,7 +1,7 @@
 # Bundle Maintainer compatibility policy
 
 The maintainer uses the MCP contract version `0.4.0`, App Bundle schema range
-`>=2.0.0 <3.0.0`, and shared validator range `>=2.0.0 <3.0.0` unless a later
+`>=3.0.0 <4.0.0`, and shared validator range `>=3.0.0 <4.0.0` unless a later
 compatible contract is explicitly returned by the server.
 
 Live resources are preferred only when their declared schema and validator

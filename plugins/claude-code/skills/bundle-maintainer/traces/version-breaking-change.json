@@ -3,7 +3,7 @@
   "description": "A hardware and configuration contraction is reported as a major-version recommendation without echoing bundle content.",
   "input": {
     "baseBundle": {
-      "schemaVersion": "2.0.0",
+      "schemaVersion": "3.0.0",
       "compatibility": { "hardware": { "machineIds": ["verdin-imx8mm", "verdin-imx8mp"] } },
       "bundle": {
         "meta": { "id": "io.example.camera", "version": "1.2.0" },
@@ -17,7 +17,7 @@
       }
     },
     "candidateBundle": {
-      "schemaVersion": "2.0.0",
+      "schemaVersion": "3.0.0",
       "compatibility": { "hardware": { "machineIds": ["verdin-imx8mm"] } },
       "bundle": {
         "meta": { "id": "io.example.camera", "version": "2.0.0" },

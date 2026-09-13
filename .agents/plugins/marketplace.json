@@ -4,9 +4,9 @@
     "displayName": "Torizon App Hub"
   },
   "metadata": {
-    "releaseFamily": "torizon-app-hub@0.2.1",
-    "sourceCommit": "dd2ca76d1af5d7d692382af8d2ec6f7500033d56",
-    "packageSha256": "6c3639500d84779c738d3081a9ae77f174e598cf2bc6999d176318469ac2f2d2"
+    "releaseFamily": "torizon-app-hub@0.2.2",
+    "sourceCommit": "dd3cfe8d62e5c5f78450263aeaf7cf7e1f7640df",
+    "packageSha256": "c434a060f9a4431ef93568aedb75d037093d41658a2da6efe5f3de4bf75b658c"
   },
   "plugins": [
     {

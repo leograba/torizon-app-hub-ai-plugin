@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "repository": {
+    "url": "https://github.com/leograba/torizon-app-hub-ai-plugin",
+    "tag": "v0.2.2",
+    "commit": "recorded-in-app-hub-index"
+  },
+  "release": {
+    "family": "torizon-app-hub@0.2.2",
+    "version": "0.2.2",
+    "sourceCommit": "dd3cfe8d62e5c5f78450263aeaf7cf7e1f7640df",
+    "status": "staged-not-published",
+    "approval": {
+      "status": "pending",
+      "authority": "Torizon App Hub release owner",
+      "record": "not-supplied"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "assets/claude-code.zip",
+      "bytes": 151790,
+      "sha256": "90914379ea4bb6d1f9bf8453a98b6300a8b4d3b9615da02845b98c5ff44b6f06",
+      "releaseAsset": true
+    },
+    {
+      "path": "assets/codex.zip",
+      "bytes": 173190,
+      "sha256": "c434a060f9a4431ef93568aedb75d037093d41658a2da6efe5f3de4bf75b658c",
+      "releaseAsset": true
+    },
+    {
+      "path": "assets/generic.zip",
+      "bytes": 204114,
+      "sha256": "3c29cc6afe3f3f5c8ca8385cd3cd00f40b6e81140058fd24221a0a499cadc38e",
+      "releaseAsset": true
+    }
+  ],
+  "channels": [
+    {
+      "id": "codex",
+      "packagePath": "plugins/codex",
+      "archive": "releases/0.2.2/assets/codex.zip",
+      "sha256": "c434a060f9a4431ef93568aedb75d037093d41658a2da6efe5f3de4bf75b658c"
+    },
+    {
+      "id": "claude-code",
+      "packagePath": "plugins/claude-code",
+      "archive": "releases/0.2.2/assets/claude-code.zip",
+      "sha256": "90914379ea4bb6d1f9bf8453a98b6300a8b4d3b9615da02845b98c5ff44b6f06"
+    },
+    {
+      "id": "generic",
+      "packagePath": null,
+      "archive": "releases/0.2.2/assets/generic.zip",
+      "sha256": "3c29cc6afe3f3f5c8ca8385cd3cd00f40b6e81140058fd24221a0a499cadc38e"
+    }
+  ],
+  "publication": {
+    "required": [
+      "commit the staging tree",
+      "create immutable tag",
+      "upload release assets",
+      "publish approved App Hub index",
+      "run published-channel smoke test"
+    ],
+    "completed": []
+  }
+}

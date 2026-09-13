@@ -17,7 +17,7 @@ Build or repair the first version of an App Hub bundle. Preserve unrelated work 
 ## Create or repair
 
 1. Inspect the workspace and existing Git state before editing. Never overwrite a changed target or modify unrelated paths. When a file or field looks like it holds a credential, name that it exists and will not be used or included — never reproduce or quote the value itself, even to illustrate the concern.
-2. For a new bundle, gather publisher identity, application name and description, hardware support, target types, companion-file inputs, license, and relevant links. Use version `1.0.0` unless the user requests another initial version.
+2. For a new bundle, gather the application name and description, hardware support, target types, companion-file inputs, license, and relevant links. Publisher details are maintained once in Account Settings. Use version `1.0.0` unless the user requests another initial version.
 3. Create `bundle.yaml`, `description.md`, and only the selected Compose, override, TCBuild, or subsystem artifacts. Use secret references or placeholders, never real credentials.
 4. Prefer current curated tags. An intentional new tag is allowed; warn that it requires human review and may delay approval, and show the closest existing alternatives.
 5. For repair, preserve bundle identity and schema major. Apply only requested changes and fixes required for validity.
@@ -42,8 +42,12 @@ network request, transfers no content, and does not claim approval. The host
 must still display the exact selection and obtain confirmation before reading
 the files into a remote request.
 
-Send `schemaVersion: 0.4.0`, `bundleSchemaRange: ">=2.0.0 <3.0.0"`, and
-`validatorRange: ">=2.0.0 <3.0.0"`. Retry only timeouts or explicitly
+Send `schemaVersion: 0.4.0`, `bundleSchemaRange: ">=3.0.0 <4.0.0"`, and
+`validatorRange: ">=3.0.0 <4.0.0"`. Publisher details belong in Account Settings,
+not in `bundle.yaml`. Bundles still written at 1.x or 2.x are read-only history:
+migrate them to `schemaVersion: "3.0.0"` and drop the `publisher` section before
+any submission or edit, because every validator reports a single
+`bundle_schema_migration_required` error for them. Retry only timeouts or explicitly
 retryable failures. For attestation mismatch, rebuild the selection after any
 file change. For secret detection, remove the secret or replace it with a safe
 environment reference and rerun locally. For incompatibility or unavailable
