@@ -39,6 +39,20 @@ using MCP evidence.
   owner-scoped `get_submission_readiness` tool to broaden an Admin aggregate
   report or infer private portfolio state.
 
+## Account-revision queue
+
+- For an authorized Admin queue report, use the bounded account-revision
+  resource and direct Admin web destination `/admin/account-revisions`. Keep
+  account moderation separate from bundle review at `/appmgmt` and partner
+  requests at `/admin/partner-requests`.
+- Report pending, approved, rejected, and stale/conflicting revision evidence
+  as returned. Approval and rejection remain human decisions. Do not mutate
+  revisions from this read-only Skill; direct Admin decisions belong in the
+  first-party web flow and require a 1–500 character rejection reason.
+- The moderation flow has no email/SES notification. Treat Account and
+  `me/readiness` as the owner feedback surfaces, and never infer that an owner
+  was notified from a queue state.
+
 ## Run the operations workflow
 
 1. Establish the report target. Record the server-resolved Admin context,

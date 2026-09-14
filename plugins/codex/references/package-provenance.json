@@ -2,7 +2,7 @@
   "canonicalManifest": "agent-plugins/torizon-app-hub/plugin.manifest.json",
   "canonicalContracts": "agent-plugins/torizon-app-hub/mcp/schemas",
   "adapterSource": "agent-plugins/torizon-app-hub/adapters/openai-codex/adapter.json",
-  "sourceFingerprint": "25a4915b91dade7c0c503b12204564eb11278a48974e11baa8499df6942fd04b",
+  "sourceFingerprint": "a34f4d62f3fc1105efe977b5c4ce493328438696c5a2674ca44a338f7002f631",
   "generatedArtifacts": "build-only",
   "networkAccess": false,
   "externalValidator": {

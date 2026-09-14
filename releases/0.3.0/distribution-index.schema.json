@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.torizon.dev/apphub/plugin/distribution-index/1.0.0",
+  "title": "Torizon App Hub AI Plugin distribution index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "indexId", "canonicalPlugin", "releaseFamily", "channels"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "indexId": { "const": "torizon-app-hub-ai-plugin" },
+    "canonicalPlugin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "manifestVersion", "productVersion", "manifestSha256"],
+      "properties": {
+        "id": { "const": "torizon-app-hub" },
+        "manifestVersion": { "$ref": "#/$defs/semver" },
+        "productVersion": { "$ref": "#/$defs/semver" },
+        "manifestSha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "releaseFamily": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "sourceCommit", "status", "approval"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^torizon-app-hub@[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$" },
+        "version": { "$ref": "#/$defs/semver" },
+        "sourceCommit": { "$ref": "#/$defs/commit" },
+        "status": { "enum": ["source-implemented-evidence-gated", "approved", "revoked"] },
+        "approval": { "$ref": "#/$defs/approval" }
+      }
+    },
+    "channels": {
+      "type": "array",
+      "minItems": 3,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/channel" }
+    }
+  },
+  "$defs": {
+    "semver": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "relativePath": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)(?:\\.|\\.\\.)(?:/|$))(?!.*\\\\)[^\\u0000]+$"
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "authority", "record"],
+      "properties": {
+        "status": { "enum": ["pending", "approved", "revoked", "rejected"] },
+        "authority": { "type": "string", "minLength": 1 },
+        "record": { "type": "string", "minLength": 1 }
+      }
+    },
+    "sourceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "commit", "path"],
+      "properties": {
+        "type": { "const": "git-commit" },
+        "commit": { "$ref": "#/$defs/commit" },
+        "path": { "$ref": "#/$defs/relativePath" }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "path", "sha256", "sizeBytes"],
+      "properties": {
+        "status": { "enum": ["candidate", "available", "revoked", "not-published"] },
+        "path": { "$ref": "#/$defs/relativePath" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "sizeBytes": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "sourceSha256", "artifactSha256", "signed", "provenance"],
+      "properties": {
+        "algorithm": { "const": "sha256" },
+        "sourceSha256": { "$ref": "#/$defs/sha256" },
+        "artifactSha256": { "$ref": "#/$defs/sha256" },
+        "signed": { "const": false },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "path"],
+          "properties": {
+            "status": { "const": "generated-package-evidence-present" },
+            "path": { "$ref": "#/$defs/relativePath" }
+          }
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["host", "hostVersions", "operatingSystems", "product", "skills", "mcp"],
+      "properties": {
+        "host": { "enum": ["openai-codex", "anthropic-claude-code", "generic-mcp"] },
+        "hostVersions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "operatingSystems": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "product": { "$ref": "#/$defs/semver" },
+        "skills": { "$ref": "#/$defs/semver" },
+        "mcp": { "$ref": "#/$defs/semver" }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["public", "accountScoped", "deployment", "publisher", "administrative", "unavailable"],
+      "properties": {
+        "public": { "$ref": "#/$defs/stringArray" },
+        "accountScoped": { "$ref": "#/$defs/stringArray" },
+        "deployment": { "$ref": "#/$defs/stringArray" },
+        "publisher": { "$ref": "#/$defs/stringArray" },
+        "administrative": { "$ref": "#/$defs/stringArray" },
+        "unavailable": { "$ref": "#/$defs/stringArray" }
+      }
+    },
+    "guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["installation", "connection", "verification", "update", "disconnect", "removal", "support", "revocation"],
+      "properties": {
+        "installation": { "$ref": "#/$defs/relativePath" },
+        "connection": { "$ref": "#/$defs/relativePath" },
+        "verification": { "$ref": "#/$defs/relativePath" },
+        "update": { "$ref": "#/$defs/relativePath" },
+        "disconnect": { "$ref": "#/$defs/relativePath" },
+        "removal": { "$ref": "#/$defs/relativePath" },
+        "support": { "$ref": "#/$defs/relativePath" },
+        "revocation": { "$ref": "#/$defs/relativePath" }
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["automaticUpdates", "rollback", "channelScopedRevocation"],
+      "properties": {
+        "automaticUpdates": { "const": false },
+        "rollback": { "const": "supported-release-or-previous-approved-candidate" },
+        "channelScopedRevocation": { "const": true }
+      }
+    },
+    "channel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "displayName", "kind", "releaseFamilyId", "approval", "source", "artifact", "integrity", "compatibility", "capabilities", "guidance", "lifecycle", "marketplaceIndependent"],
+      "properties": {
+        "id": { "enum": ["codex", "claude-code", "generic"] },
+        "displayName": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["custom-host-channel", "reduced-generic-fallback"] },
+        "releaseFamilyId": { "type": "string", "minLength": 1 },
+        "approval": { "$ref": "#/$defs/approval" },
+        "source": { "$ref": "#/$defs/sourceReference" },
+        "artifact": { "$ref": "#/$defs/artifact" },
+        "integrity": { "$ref": "#/$defs/integrity" },
+        "compatibility": { "$ref": "#/$defs/compatibility" },
+        "capabilities": { "$ref": "#/$defs/capabilities" },
+        "guidance": { "$ref": "#/$defs/guidance" },
+        "lifecycle": { "$ref": "#/$defs/lifecycle" },
+        "marketplaceIndependent": { "const": true }
+      }
+    },
+    "stringArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

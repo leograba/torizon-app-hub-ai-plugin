@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "torizon-app-hub-generic",
+  "releaseProfileId": "source-implemented",
+  "sourceCommit": "15b51ee86bab6082f0cdddc5abcc34fd4b0e1f83",
+  "contractDigest": "ad72266ef946e664a1c629d3915d4ce43b30be94120114b196fc3d8260010520",
+  "releaseProfileDigest": "9b10ed3bbf0f502890d81e3a8dbf2a011528c98b600a7a6ef1d7da3cf4b1a54f",
+  "workspaceDirty": false,
+  "untrackedFiles": 0,
+  "cleanBoundary": "tracked-and-untracked",
+  "localConformance": "not-verified",
+  "evidenceRun": null,
+  "blocker": "immutable-test-evidence-not-supplied",
+  "deploymentVerified": false,
+  "modelHostVerified": false,
+  "marketplaceApproved": false,
+  "humanApproved": false
+}

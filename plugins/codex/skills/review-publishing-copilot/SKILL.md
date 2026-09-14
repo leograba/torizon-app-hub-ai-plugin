@@ -40,6 +40,23 @@ before using MCP evidence.
   first-party web handoff. Confirmation authorizes that named web handoff only;
   it never authorizes a direct MCP mutation or changes server authorization.
 
+## Account public-data review
+
+- Treat publisher name, website, contact email, support URL, and company logo
+  as one complete account revision. Public and publication-readiness evidence
+  uses approved values only; pending or rejected proposals do not change the
+  public bundle representation.
+- For an authorized Admin, use the bounded account-revision queue and the
+  first-party `/admin/account-revisions` page. The full contact email may be
+  shown in that Admin-only review context.
+- Approval and rejection are account decisions, not bundle manual tests.
+  Rejection requires a clear 1–500 character explanation; owners see it in
+  Account and can correct the prefilled rejected proposal. Do not claim an
+  approval, publication, or notification without server evidence.
+- The first approved complete profile is required before first publication. A
+  complete approved profile remains valid while a replacement is pending.
+  Account moderation has no notification transport in scope.
+
 ## Run the review workflow
 
 1. Establish the target. Record the caller context, bundle ID, candidate/base

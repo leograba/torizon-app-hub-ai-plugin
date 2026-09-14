@@ -5,16 +5,16 @@
   },
   "metadata": {
     "description": "Torizon App Hub Claude Code plugin.",
-    "releaseFamily": "torizon-app-hub@0.2.2",
-    "sourceCommit": "dd3cfe8d62e5c5f78450263aeaf7cf7e1f7640df",
-    "packageSha256": "90914379ea4bb6d1f9bf8453a98b6300a8b4d3b9615da02845b98c5ff44b6f06"
+    "releaseFamily": "torizon-app-hub@0.3.0",
+    "sourceCommit": "15b51ee86bab6082f0cdddc5abcc34fd4b0e1f83",
+    "packageSha256": "5432736521cd9b29d032db1388f9552299810ed53bf4a188e90b369c0b8950b1"
   },
   "plugins": [
     {
       "name": "torizon-app-hub",
       "displayName": "Torizon App Hub",
       "source": "./plugins/claude-code",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "category": "Developer Tools",
       "strict": true
     }

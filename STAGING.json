@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/leograba/torizon-app-hub-ai-plugin",
-  "release": "0.2.2",
-  "sourceCommit": "dd3cfe8d62e5c5f78450263aeaf7cf7e1f7640df",
+  "release": "0.3.0",
+  "sourceCommit": "15b51ee86bab6082f0cdddc5abcc34fd4b0e1f83",
   "publicationStatus": "not-published",
   "repositoryCommit": "recorded-after-publication-in-app-hub-index"
 }

@@ -1,0 +1,786 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "torizon-app-hub-generic",
+  "sourceCommit": "15b51ee86bab6082f0cdddc5abcc34fd4b0e1f83",
+  "signingKeyId": null,
+  "status": "active",
+  "checkedAt": "2026-09-13T22:19:10-03:00",
+  "revocationAuthority": "Torizon App Hub release owner",
+  "instructions": "Revoke the artifact digest and signing key through the release record; disconnect delegated OAuth separately.",
+  "subjects": [
+    {
+      "name": "app-discovery-advisor.skill",
+      "digest": {
+        "sha256": "258411f7e0ee3075a6c413d56d998ff2fbfd21a632d13cca01afd1f6ffce1f79"
+      }
+    },
+    {
+      "name": "bundle-builder.skill",
+      "digest": {
+        "sha256": "1feade8a4313b6bbd404320d1b27eec4c9d9636518948f354521ef8c14229ed1"
+      }
+    },
+    {
+      "name": "inventory.json",
+      "digest": {
+        "sha256": "25fe7b6f0fa36c6e1185b9479918c001e4ea3be4e020fd6fdf76b8532a85d395"
+      }
+    },
+    {
+      "name": "stage/README.md",
+      "digest": {
+        "sha256": "853ca08ebf82b05790a0b98f070d8150fdf5d110a8836f864b4132352a72bcd9"
+      }
+    },
+    {
+      "name": "stage/acceptance-tests.json",
+      "digest": {
+        "sha256": "85b5f87fd6562df0813885a8929760268b23ab89dcdaf4ea1e0295fbd02b6f1b"
+      }
+    },
+    {
+      "name": "stage/acceptance-tests.schema.json",
+      "digest": {
+        "sha256": "b349d5db6c5a0a0b443442ff614c0438aeb96acbc1442a7a5ce3eb4eae2910cc"
+      }
+    },
+    {
+      "name": "stage/docs/compatibility.md",
+      "digest": {
+        "sha256": "18068ac41f85d2c78d65cc11b073e359d6f4b258b3b48bf6f1ca81d0ae5ceaf9"
+      }
+    },
+    {
+      "name": "stage/docs/installation.md",
+      "digest": {
+        "sha256": "2f7f9244579f1c7b33258590950ae379e3ff969d4e48a08e6ac5b3a40953afba"
+      }
+    },
+    {
+      "name": "stage/docs/lifecycle.md",
+      "digest": {
+        "sha256": "37ca4af4382fc906ebfa20257b5544386c23136daa1ccd18d6b660fafa1353ad"
+      }
+    },
+    {
+      "name": "stage/docs/privacy.md",
+      "digest": {
+        "sha256": "b604787182c529fff60acee52df19f68cdf6f66628d161d80b8cdf17c25892f0"
+      }
+    },
+    {
+      "name": "stage/docs/revocation.md",
+      "digest": {
+        "sha256": "d817a8bce82a2d98d444137d58ad3bb640bab9594cc0b3a9561edce674af92f7"
+      }
+    },
+    {
+      "name": "stage/docs/security.md",
+      "digest": {
+        "sha256": "c73262f1b7f9905547c95518b24f038cab2652ef70be96590ee3584f23dbbbf2"
+      }
+    },
+    {
+      "name": "stage/docs/support.md",
+      "digest": {
+        "sha256": "f55d371538807647c60e621293acb1c8c814f020276108433db439b3e4664389"
+      }
+    },
+    {
+      "name": "stage/mcp-connection.json",
+      "digest": {
+        "sha256": "a66319d065d62d1fdbff5d71796176d5676b4dab6ad95a50f00cac7f4c47e16b"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/README.md",
+      "digest": {
+        "sha256": "9b5ce9933928884bbf87d8e39db47ece10991ed6a36a2fca17c20b548a716e96"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/audit/event.schema.json",
+      "digest": {
+        "sha256": "0599f8ad60ea2f7dd3c528af2044b42758a2cb7d21eb5b27015d21274fd83548"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/audit/operation-event.schema.json",
+      "digest": {
+        "sha256": "3b409a07b1040e61c972603d2141634b2d197e3b3bb48628e87a584f7592649b"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/audit/security-event.schema.json",
+      "digest": {
+        "sha256": "a12e6366f63e0b8a37d0cb82be21dee9a16367adc60b686fbfc1a5bf66e02e0e"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/audit/telemetry-event.schema.json",
+      "digest": {
+        "sha256": "5c60741bf5ab31c25c44dc38c132ce1d37aff48c0866205038487e3f0e4163f3"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/common/common.schema.json",
+      "digest": {
+        "sha256": "f3bffdcf0b6093ae2d64aab01960a7c9a36111cbaa68f31c5a999eb1f7c4cbc8"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/common/request-metadata.schema.json",
+      "digest": {
+        "sha256": "d8ba364f5570c51e72e052448f62ac73a257ee43970f334018283965c03954ff"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/common/response-metadata.schema.json",
+      "digest": {
+        "sha256": "710dc26697c2624c871db4343efad4a3d81d3eaf41433f19db309476c0e7634e"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/errors/cursor-expired.schema.json",
+      "digest": {
+        "sha256": "852c3f5aa546d8b692e33cf5208442281e582537d11918387de1f49208c2110c"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/errors/error.schema.json",
+      "digest": {
+        "sha256": "34b0aac7c490b1632b3da049e6a434e61073822dd6cf1c441facf1a60259531e"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/errors/invalid-cursor.schema.json",
+      "digest": {
+        "sha256": "36b6e3ec11012ef7b100795a9ed6845ae68cf4dfdd67cdffdbe916d04b803f1b"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/fixtures/reference-model.schema.json",
+      "digest": {
+        "sha256": "c00a0bb0ab462a2a491b784d8430d0050a891e8c9db60d2530faaa2768f1da0d"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/operations/idempotency.schema.json",
+      "digest": {
+        "sha256": "b107e290cc0410f6404e2db8c53a1834510817bde0ddc87c3a0b3a4d026d8759"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/operations/operation.schema.json",
+      "digest": {
+        "sha256": "81ccc42ec6e3b17a9dc427e43ccec81db284605238992dad782fc38720ce7119"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/operations/preview-token.schema.json",
+      "digest": {
+        "sha256": "b6e549c5834555eee52e8eb7c3cb4ed05795f4e7a562793ad6379b476698d7e7"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/pagination/cursor-binding.schema.json",
+      "digest": {
+        "sha256": "f0454f51bc37a9d90ec84dcbebd707aff8e92262bb257735340b98315f295405"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/pagination/request.schema.json",
+      "digest": {
+        "sha256": "afe3e439e1dd1124a7b6e1e76224d0fa439a117081f98fd7cf3dcb10ea4c13ca"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/pagination/response.schema.json",
+      "digest": {
+        "sha256": "314a031f488050b265216db991b460ffe16fe9b8ca5b853b7a535c043c84ddd6"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/audit-catalog-quality.schema.json",
+      "digest": {
+        "sha256": "b2d57b595e146d1da5c458542ca750f6b00a91ef526a8816ce81a87cf39ae201"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/check-my-deployment-readiness.schema.json",
+      "digest": {
+        "sha256": "8a71428b053439dfc0459200c2d487c853fbe8212759577990e8576455601bdf"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/common.schema.json",
+      "digest": {
+        "sha256": "329c5cb849f627cd607c6ca8a68222977438e5e001be6d51b1e1d7414875dc05"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/compare-app-options.schema.json",
+      "digest": {
+        "sha256": "baf3d474aa1b1cb9324b317d0068dfc55694be5e3e8e2f1b39e2447ad78ef3aa"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/explain-a-deployment-failure.schema.json",
+      "digest": {
+        "sha256": "53aa0c67d9053adccf6b633d68e2e1a9c28d2b7a5fc80edf4e9a8465a68acf0b"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/explain-bundle-next-steps.schema.json",
+      "digest": {
+        "sha256": "b27b75fc1ae6c7121751e2933185358ebb0fbdb0a7ed341b499319bce5f4b22e"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/find-an-app-for-my-project.schema.json",
+      "digest": {
+        "sha256": "52b8b67398d683b90e115de17f538e54e0caffef71181212bc1fb33a8287c11b"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/finish-my-submission-draft.schema.json",
+      "digest": {
+        "sha256": "44ad7f82429599db992893caf05ea68020042ab3cf11b36977eb53fe820b9589"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/plan-a-safe-deployment.schema.json",
+      "digest": {
+        "sha256": "2cdfe96abb798e58a96622a3ca38f5540ab762ac2dcc7dabd3f5c663a0750940"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/prepare-bundle-for-publication.schema.json",
+      "digest": {
+        "sha256": "89fc1008be3d2edb8ea49a4df867b03abb047f17bfe3685427bd4162fe650549"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/review-bundle-as-admin.schema.json",
+      "digest": {
+        "sha256": "b8b43740e2277362be1f06e667d39fe828d8a95101d24065c72a446dbf338df2"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/review-my-bundle-before-submission.schema.json",
+      "digest": {
+        "sha256": "31bc435fa14df575ffedaf7318bc38431fd06c6106dbc0ceb9c366394dade2b1"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/summarize-my-partner-portfolio.schema.json",
+      "digest": {
+        "sha256": "c4f0ec657336f9e46b22e5b7249b02bca276e2802c6d976fb520426d759cdfa1"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/triage-the-admin-review-queue.schema.json",
+      "digest": {
+        "sha256": "8c4b86c6dcd74bf59b6cb257a56b5c6630c98d34bb81b825e7922faa819fd65b"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/prompts/turn-this-project-into-a-bundle.schema.json",
+      "digest": {
+        "sha256": "b8c3e1e5381187ef7a93ee898a91f8c2ab3ac6893dbd30f9e5b69ffc280ee6e1"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/admin-account-revisions.schema.json",
+      "digest": {
+        "sha256": "c2dd860ec2f86de268639c937944466e1e6b47fbb12fad29831860340e92528c"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/admin-partner-requests.schema.json",
+      "digest": {
+        "sha256": "39754a6ab24042259631730c424f8a2ec503cb410a522b758f276e05a94b53a2"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/admin-review-queue.schema.json",
+      "digest": {
+        "sha256": "64a070ec7cfdcfdb59677bb5d754e5aecda6020e40070a5d80b18da46dc028b5"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/app-artifacts.schema.json",
+      "digest": {
+        "sha256": "010d74a9841dd10f4a51128502cca18f3641b7f3e0ffcade0c1eb76c252bdd62"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/app-detail.schema.json",
+      "digest": {
+        "sha256": "50748e50a8393a5f3db68060fc1ff7d378edd436a21490bb452eb9719e3e46f8"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/app-versions.schema.json",
+      "digest": {
+        "sha256": "581fcba5ba0a44ca4408d9656beb2112b84055eadd32ba4a720ed40df2e06157"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/bundle-examples.schema.json",
+      "digest": {
+        "sha256": "9eecb348b77cd94621c082e578341801598d3eaf338ea793aca35c239d088e52"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/bundle-lifecycle.schema.json",
+      "digest": {
+        "sha256": "6cae660331cbef98c846ad52409e7369d23fdf400f8167f1f508b6968a311002"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/bundle-spec-current.schema.json",
+      "digest": {
+        "sha256": "4287d8970a4cdd6bcf2d6073a8e93b791914fd7934fa30c4d4a9d08bb9799cad"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/bundle-spec-versioned.schema.json",
+      "digest": {
+        "sha256": "e5de721d6ac122129027bc7d68b91673ab1cb8a3a60982dd53bfd0a4618a0546"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/bundle-tests.schema.json",
+      "digest": {
+        "sha256": "56d426f38a811ef93a4e684decf998efc2bae8b6a5284892884e8038a6f2a058"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/catalog-featured.schema.json",
+      "digest": {
+        "sha256": "7cef72c8e1a6024a0a088fc8eaa4cc306dfec1bc201ad9ec2cbd7bff1e569ca1"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/catalog-public.schema.json",
+      "digest": {
+        "sha256": "2d7da2b09f9ab337da6720a12778d1bbe6a0de62b40e0f513e9f5da910c111bd"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/hardware-catalog.schema.json",
+      "digest": {
+        "sha256": "4d30b1abcc42796396da75185a7cb18bcf4c9de30fbec6a00cd6f15a63c0f217"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/lifecycle-model.schema.json",
+      "digest": {
+        "sha256": "4800de82483e73fc24bf7384109b40c57c3d1bc59bf4cca9d3b999b939474abc"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/me-bundles.schema.json",
+      "digest": {
+        "sha256": "ce9f15e781c013144f395f1e6f6b3080850f0c17bfab86b2f8e7d15bed983e42"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/me-deployments-recent.schema.json",
+      "digest": {
+        "sha256": "19fb72bcc3b478230b1c9ef0e308a45f9188d8a9bfe24f792cf38cf389c579cf"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/me-devices.schema.json",
+      "digest": {
+        "sha256": "dae6bb3625e026572bd5f131e0d5d8a2981a80e40b76c13bbfb1a4bed4815027"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/me-profile.schema.json",
+      "digest": {
+        "sha256": "257263aa87a861c4ac9331045cc04e7f2d5bf4ec0e57cb1969b6511a8f131001"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/me-readiness.schema.json",
+      "digest": {
+        "sha256": "9dbc277af0a206dee18a1f37410bddb13aca307ba9cce9de6e3814cebff97803"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/me-submission-draft.schema.json",
+      "digest": {
+        "sha256": "9904c9849226955db988f3094130bca2d4a6776dc1ee234220b9972c82116a7f"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/publisher-detail.schema.json",
+      "digest": {
+        "sha256": "16edc8b59659789d0d8439616095ce3dc9baf1342ceffe80d6cea701e717ac2e"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/review-policy.schema.json",
+      "digest": {
+        "sha256": "7b348f13084d6bb2884ee5b283bb318a78e40579aa579f718903dc05cd1951ee"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/submission-policy.schema.json",
+      "digest": {
+        "sha256": "a232f15eea86e7be3a2c8ce2301ac9c6578130a48d7d9ebe27bd18c85eec0675"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/resources/tags.schema.json",
+      "digest": {
+        "sha256": "d6ebf3758be2fe1b1ba853562df130c6229ffa743b614de4a2c69e1ca2b6a911"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/account-revision-decision.schema.json",
+      "digest": {
+        "sha256": "8cf34148781e1e0377e56426880cbc6136bd7450c90dc41c57eddc09ec7e7d0a"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/audit-catalog-quality.schema.json",
+      "digest": {
+        "sha256": "144f803bce39f7c1c8d16145543949cca8ed795ce4f69536187f897ca7e8ab4d"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/change-account-role.schema.json",
+      "digest": {
+        "sha256": "3ae978c6f97800bb17596bd2be1539dea549a0a0ef42e0581c0454caeded7e63"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/check-hardware-compatibility.schema.json",
+      "digest": {
+        "sha256": "9c486fee809b8233e42675c47d336bf3f149bfc03a40bcad4ccdc172a6d2b87f"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/common.schema.json",
+      "digest": {
+        "sha256": "adcef0e806ce813c2a2e57ba4f118029bdd38d3b078b3303a49a72d974b590c4"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/compare-apps.schema.json",
+      "digest": {
+        "sha256": "b3527c70008969920e9a94f2a6592ccbfa47294a5851313d0897ad8c73feb0af"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/compare-bundle-versions.schema.json",
+      "digest": {
+        "sha256": "29e9846968115443230e2e363981d985fa5699843463ec768a7da5b8cb3089ed"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/critical-action-preparation.schema.json",
+      "digest": {
+        "sha256": "2e04e2c6bee4bba3a211fb9400b965b9d91608a43ee9708fcf0d867a51c66214"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/critical-prohibited.schema.json",
+      "digest": {
+        "sha256": "0e0fd19a662a5cb018a6b3fc35d94f6f50e29632d123182118a7b61e2df310c5"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/delete-bundle.schema.json",
+      "digest": {
+        "sha256": "4f34e45f8af70f6e2e13651ddc82637622f302235e4c096edc9e777a9fc701c4"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/delete-submission-draft.schema.json",
+      "digest": {
+        "sha256": "3985c3afc4933b21a291efa54769e68a571e6b8a8492c718945b059864f8e603"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/explain-bundle-configuration.schema.json",
+      "digest": {
+        "sha256": "c8927c4c23460edb02cf3ec31ef6267d9192511a72199e8593c5b76c12adc82b"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/get-account-readiness.schema.json",
+      "digest": {
+        "sha256": "18befd451db95948fe03272fa2a3004e2dd8f576b5ad79f0d7ff32630062d4e6"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/get-bundle-lifecycle-summary.schema.json",
+      "digest": {
+        "sha256": "c444b81edbc51d8857989fcfa4088312420fb084b46136d43f06a028ddfcbf73"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/get-deployment-status.schema.json",
+      "digest": {
+        "sha256": "73cde97d0ff2c817234df690bf8ace3c5379977e483ef1cb846dbecfc8fdf0dc"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/get-submission-readiness.schema.json",
+      "digest": {
+        "sha256": "6af039d9aa5b735871d54dea4194589c831b77463e7dc739cc0916dc5d71544f"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/list-attention-required-bundles.schema.json",
+      "digest": {
+        "sha256": "17a21ad406009bc210d4a9605f74a2598d1586b6649b095f005aa2da6335f1a8"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/list-devices.schema.json",
+      "digest": {
+        "sha256": "7ee350d06e897283fa28d5cd82be9cfd03e623945ee11eeb99fdb0a6da9dce52"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/override-failed-tests.schema.json",
+      "digest": {
+        "sha256": "97bddbfa6284c40add94357176970d92fae53bb5fa03091eba42c589bb5ab732"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/preflight-deployment.schema.json",
+      "digest": {
+        "sha256": "2e33eaa347f91421ec70159db7bd19bdc292411208b140160431b5d29ae11afa"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/prepare-partner-request.schema.json",
+      "digest": {
+        "sha256": "f14466fd0ed27a405da88e7a57e93cbebd6aff9d84b3f4c6f6159d0eeef5468c"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/publish-bundle.schema.json",
+      "digest": {
+        "sha256": "09dd545a3f069d289215a57cc6bebd32e82ec49ccea221e66f51e8d70599c957"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/recommend-apps.schema.json",
+      "digest": {
+        "sha256": "462a5c281fc1f9f10a38bd960a3d34eea15d704f34f321cbddce55e37178e096"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/review-bundle.schema.json",
+      "digest": {
+        "sha256": "d105c42a2cd59c50e82c31806307317fb7a122137e3447d733b8a2637340daf5"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/save-submission-draft.schema.json",
+      "digest": {
+        "sha256": "55a5666e4b62427f15e08ee5f8d2ccd5222a3b31b82e821d04935e5d7be72b37"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/search-apps.schema.json",
+      "digest": {
+        "sha256": "09e9e1d4fba76b93ebb7db843439a9f3d924bca5f444a8caf2985e37b3e24cae"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/set-bundle-featured.schema.json",
+      "digest": {
+        "sha256": "ad24d28d50d946fedad57f20e9b7934d7e0aa25b491534270d8c16d798d8d9da"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/set-bundle-star.schema.json",
+      "digest": {
+        "sha256": "6ae22ef74cde8802178713e6b9e12671453a3dc659d823c72e1779863e0d70da"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/set-default-hardware.schema.json",
+      "digest": {
+        "sha256": "a33572be54aa8535a1b71c09139a05304f079e582b46cd8d8c56446d3a2fe83c"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/start-deployment.schema.json",
+      "digest": {
+        "sha256": "dea5ac09c7b61b199169091050f1b5fff21eec3021d0527a24d31baf35489939"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/submit-bundle-edit.schema.json",
+      "digest": {
+        "sha256": "e603353dd560870d758110adfe8f65050c0e58e8c428a77a62e35cd50f56e771"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/submit-bundle.schema.json",
+      "digest": {
+        "sha256": "8d4c3679af1cb8bae6a8c78411148ff03c6a39103a569a3bce6b16260f5e37f8"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/submit-partner-request.schema.json",
+      "digest": {
+        "sha256": "7799aca38e12b7015a63a83b9f80b26d238bb6f8ab7619bf840acd7082124c25"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/transfer-bundle-ownership.schema.json",
+      "digest": {
+        "sha256": "c37583abafd440a4c9139ddac2693c72b31f552a44a7c5c1a89a7f0936d2fecb"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/transition-bundle-lifecycle.schema.json",
+      "digest": {
+        "sha256": "bc46067a5bc2c0cd27db7f7f4eb124cf70c0d239802fffdb83c708bce2b0b0eb"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/update-analytics-preference.schema.json",
+      "digest": {
+        "sha256": "be445e9039f343480eba8d1b2e9ba0724748e4313a471754e1fcd6bb445424a2"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/update-manual-test-result.schema.json",
+      "digest": {
+        "sha256": "aea60859c0df0c3da86b5dc95b2208ce0bd5e3a5ba2ca269144f6a965dbeefdf"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/validate-bundle-workspace.schema.json",
+      "digest": {
+        "sha256": "d7e7bcc6bcae250ef09a4ee8a64b0ffe359fb7651953d2d6d3ab0d1b88371240"
+      }
+    },
+    {
+      "name": "stage/provenance/mcp-schemas/tools/validate-ownership-transfer.schema.json",
+      "digest": {
+        "sha256": "6ee69b84dd642d597b9a8c85da2e89f90a0ce52bab65d85c607155719d583f58"
+      }
+    },
+    {
+      "name": "stage/provenance/plugin.manifest.json",
+      "digest": {
+        "sha256": "ad72266ef946e664a1c629d3915d4ce43b30be94120114b196fc3d8260010520"
+      }
+    },
+    {
+      "name": "stage/provenance/plugin.manifest.schema.json",
+      "digest": {
+        "sha256": "8f6c8b2a745c5d63b8e3db8a9d42623721bea698cf649beb71114f5128bf3b84"
+      }
+    },
+    {
+      "name": "stage/release-manifest.json",
+      "digest": {
+        "sha256": "894d844d51c506a411ee3546e731823657dccd8ef16d99e3cf531b967f96fd6d"
+      }
+    },
+    {
+      "name": "stage/release-manifest.schema.json",
+      "digest": {
+        "sha256": "89ec0b6bbd954746450007d673d039b5e7407c6d51d016783ca5429ccea88ec9"
+      }
+    },
+    {
+      "name": "stage/skills/app-discovery-advisor/SKILL.md",
+      "digest": {
+        "sha256": "f0e2ffb625e091d07380d0324cb330470a8c5fbb1b7cc16c83e4b8dfc85bb1d8"
+      }
+    },
+    {
+      "name": "stage/skills/app-discovery-advisor/agents/openai.yaml",
+      "digest": {
+        "sha256": "5121aabd5b66937e0e9ba6db7d1d5ecd36af637e947566fbafb6dbbb0d344577"
+      }
+    },
+    {
+      "name": "stage/skills/app-discovery-advisor/references/offline-guidance.md",
+      "digest": {
+        "sha256": "0229c919882b71e32882c35ad6517f97a1a741fe34081d800a5c4f25bbb6f3ec"
+      }
+    },
+    {
+      "name": "stage/skills/app-discovery-advisor/traces/paginated-search.json",
+      "digest": {
+        "sha256": "74cb823d49e0673f426e63f2ce3082f9ae9368389648e532e46b26a55f211a8e"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/SKILL.md",
+      "digest": {
+        "sha256": "37b87dfb812f0c27bcaf0b8c7457ddd21e1ab07c8c9e5c13f3b3f0606b45c2da"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/agents/openai.yaml",
+      "digest": {
+        "sha256": "830ee96adab84456ca9f89daccd24902eac37a811dea386f55e75ade859f4a0a"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/assets/app-bundle.example.yaml",
+      "digest": {
+        "sha256": "5854d0d5d060f9d8db41278bd6c905a74358cfb81d54405cdd9488119d6a53e6"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/assets/app-bundle.schema.json",
+      "digest": {
+        "sha256": "416571b81f54e94834b0efa729e1200a6f6398598925b44db2912c06bffc973d"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/assets/tags.json",
+      "digest": {
+        "sha256": "38c8bdf95f6d6586291515757bf73ad3754daf3e8f34b19e8fe544c97d3d9dac"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/references/safety.md",
+      "digest": {
+        "sha256": "367b180eb4f8cc4964dac31f251f9d77f0b2c734d92aed51c01405e3ea88f35b"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/scripts/build-validation-selection.mjs",
+      "digest": {
+        "sha256": "5d50f6c30c8f13228907a5c80841c7bc1251f112cdb8c67833f09d2020d96d98"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/traces/secret-rejection.json",
+      "digest": {
+        "sha256": "df88c8f5ef7b75a498161c06c74a1e316a7e1e4033c0d148fab54e027638e7b1"
+      }
+    },
+    {
+      "name": "stage/skills/bundle-builder/validator/index.cjs",
+      "digest": {
+        "sha256": "58be035a0ed564584d4dc008e802b293365d3efa079200df4943e995c3e533e2"
+      }
+    },
+    {
+      "name": "torizon-app-hub-public.zip",
+      "digest": {
+        "sha256": "3ed7a0153e7dcef2f56afaee6bf20892627011e6beb16ffd3ae8443fbec14aa0"
+      }
+    }
+  ]
+}

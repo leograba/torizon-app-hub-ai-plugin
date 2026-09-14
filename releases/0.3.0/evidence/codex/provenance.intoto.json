@@ -1,0 +1,359 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "subject": [
+    {
+      "name": ".agents/plugins/marketplace.json",
+      "digest": {
+        "sha256": "17b2867c581ec858ffb61f014e914405ac6ab70c3d948281c678e032f1bfdf61"
+      }
+    },
+    {
+      "name": "package-inventory.json",
+      "digest": {
+        "sha256": "d68061e53b7dc2c560d75ebef9bdeda4c32a443ff7f86c6996ca7619439be6b9"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/.codex-plugin/plugin.json",
+      "digest": {
+        "sha256": "8db80afc75a463a5eca9fa821e2219b2567ef85265560c7c849ee583d8fe50e0"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/.mcp.json",
+      "digest": {
+        "sha256": "98b90dc051e95eef1b3e1fa974a2516fecc0497a7c771858c96ca212eed25668"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/assets/icon.png",
+      "digest": {
+        "sha256": "caab49bedde1869cb559933b56eda51da57fe4d919550d9f4f96d1095a81fa19"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/references/capability-inventory.json",
+      "digest": {
+        "sha256": "a9424e0d5089d545b0a7ed724664d8904a81837aabeacce1e014f35be4600f52"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/references/capability-parity.json",
+      "digest": {
+        "sha256": "4e046c99a12385744b0c558a187811b36acee3e78179d37c3257ccaa15685a0a"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/references/install-lifecycle.json",
+      "digest": {
+        "sha256": "9f97b1c87b048adbc8ace6ed7ac7a586ac1801e8337341bd39250012bb94ad53"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/references/mcp-connection.json",
+      "digest": {
+        "sha256": "4eaba778dfbf20a958d34cafcc82e86bbd82a2fcdf1b1e17f011a413d9d2eaa4"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/references/package-provenance.json",
+      "digest": {
+        "sha256": "397cb33addd54da9117417c4cbbba87b9b5c8e09267aaf3501413fbe21b6095c"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/references/privacy-data-flow.json",
+      "digest": {
+        "sha256": "a3fb59d98978f47deee3cee729ec0ef8e9e1298e2d74b558934053384414be92"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/references/test-cases.json",
+      "digest": {
+        "sha256": "2a9f38b02cdb5499e0f7c254d88eca558c89f98290fe64e4fdecb60e2db2795f"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/app-discovery-advisor/SKILL.md",
+      "digest": {
+        "sha256": "f0e2ffb625e091d07380d0324cb330470a8c5fbb1b7cc16c83e4b8dfc85bb1d8"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/app-discovery-advisor/agents/openai.yaml",
+      "digest": {
+        "sha256": "5121aabd5b66937e0e9ba6db7d1d5ecd36af637e947566fbafb6dbbb0d344577"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/app-discovery-advisor/references/offline-guidance.md",
+      "digest": {
+        "sha256": "0229c919882b71e32882c35ad6517f97a1a741fe34081d800a5c4f25bbb6f3ec"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/app-discovery-advisor/traces/paginated-search.json",
+      "digest": {
+        "sha256": "74cb823d49e0673f426e63f2ce3082f9ae9368389648e532e46b26a55f211a8e"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/app-hub-connection-and-safety/SKILL.md",
+      "digest": {
+        "sha256": "81e6aa27658c8bb44a0dc09144616d5cb7c9aa41774caf05c6a560e11cd36570"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/app-hub-connection-and-safety/agents/openai.yaml",
+      "digest": {
+        "sha256": "0797f394876b3a135d340002f1daa1e115d9c916effe677bf0df9769a2c6c9f6"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/SKILL.md",
+      "digest": {
+        "sha256": "37b87dfb812f0c27bcaf0b8c7457ddd21e1ab07c8c9e5c13f3b3f0606b45c2da"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/agents/openai.yaml",
+      "digest": {
+        "sha256": "830ee96adab84456ca9f89daccd24902eac37a811dea386f55e75ade859f4a0a"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/assets/app-bundle.example.yaml",
+      "digest": {
+        "sha256": "5854d0d5d060f9d8db41278bd6c905a74358cfb81d54405cdd9488119d6a53e6"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/assets/app-bundle.schema.json",
+      "digest": {
+        "sha256": "416571b81f54e94834b0efa729e1200a6f6398598925b44db2912c06bffc973d"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/assets/tags.json",
+      "digest": {
+        "sha256": "38c8bdf95f6d6586291515757bf73ad3754daf3e8f34b19e8fe544c97d3d9dac"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/references/safety.md",
+      "digest": {
+        "sha256": "367b180eb4f8cc4964dac31f251f9d77f0b2c734d92aed51c01405e3ea88f35b"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/scripts/build-validation-selection.mjs",
+      "digest": {
+        "sha256": "5d50f6c30c8f13228907a5c80841c7bc1251f112cdb8c67833f09d2020d96d98"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/traces/secret-rejection.json",
+      "digest": {
+        "sha256": "df88c8f5ef7b75a498161c06c74a1e316a7e1e4033c0d148fab54e027638e7b1"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-builder/validator/index.cjs",
+      "digest": {
+        "sha256": "58be035a0ed564584d4dc008e802b293365d3efa079200df4943e995c3e533e2"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-maintainer/SKILL.md",
+      "digest": {
+        "sha256": "bc6b2c686dbe19b349c7d073ea45cdeffa3b69b5f2a0be1c3dc9efaad349fe06"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-maintainer/agents/openai.yaml",
+      "digest": {
+        "sha256": "3dfa613a6af73e893f25428dbb3e48c4ad76c3f12b66a4a1c4b4258d3adb99f9"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-maintainer/references/compatibility.md",
+      "digest": {
+        "sha256": "cc13e3196473ce859a3ad1c9f75e429eeb54efea58c984fc6e8066c3250543e7"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-maintainer/references/safety.md",
+      "digest": {
+        "sha256": "58ba5875ae06aa98181c8389c1b364d622b1b97e62fa8cf3bb65b9b7c2844d7b"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-maintainer/scripts/analyze-bundle-change.mjs",
+      "digest": {
+        "sha256": "7e1e78ae5005167aba43ab39be05da0cbc83f464d35df9920b86ccb99757ce02"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/bundle-maintainer/traces/version-breaking-change.json",
+      "digest": {
+        "sha256": "bfa46afc585b399444e9822182b36803ed38a9b40469b4d0764e9cb1627de98b"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/deployment-copilot/SKILL.md",
+      "digest": {
+        "sha256": "917beda2776c7baf3d6e89d220e345b4bc38b0200d3576a2803b54ba5918a328"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/deployment-copilot/agents/openai.yaml",
+      "digest": {
+        "sha256": "355f3b198b6587a0515609a6a9bf9fb5fa62c58ccd0a6ecc2bb69d84738243d1"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/ecosystem-operations/SKILL.md",
+      "digest": {
+        "sha256": "76d736425f8c7b6e7fe5beabfec0fb092f4d38cf44d2156738f60756a1ed5537"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/ecosystem-operations/agents/openai.yaml",
+      "digest": {
+        "sha256": "208ea4aacdba072defaccc6d960bdec176f1ffe8744ddbbedf09c7b08fabbdb8"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/ecosystem-operations/references/operations-evidence.md",
+      "digest": {
+        "sha256": "dc782b732a82ddb2678a2e5c95053d5193455c96a9b826f63cd90164dd7ed1c5"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/ecosystem-operations/references/safety.md",
+      "digest": {
+        "sha256": "b25e21bee91d988990a81f640cb367a6954a2288ef20777efaab41854a3dcf23"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/ecosystem-operations/traces/offline-and-injection.json",
+      "digest": {
+        "sha256": "a1a771aa6586f247129d51c951225213fdabeb99843d1bee1d1fb751ff7be8e9"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/ecosystem-operations/traces/operations-report.json",
+      "digest": {
+        "sha256": "8e3e7c8afdd216f5e4e3b7f234313c3b3ce54e023d8b21fe811d45dc181c97f0"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/review-publishing-copilot/SKILL.md",
+      "digest": {
+        "sha256": "d09801fba58f170f8be3dcc953e3f6a355fe40676f9b53134ede43d197c8fb34"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/review-publishing-copilot/agents/openai.yaml",
+      "digest": {
+        "sha256": "67649510387c75b2287f7ea6fa072a3a45008a34527813704e825e4459bac6e1"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/review-publishing-copilot/references/review-preflight.md",
+      "digest": {
+        "sha256": "9a3ce8f2d57b1d23fda270ccb708969693b175d95df678fa3828ee7e8e1c72fb"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/review-publishing-copilot/references/safety.md",
+      "digest": {
+        "sha256": "df630b020dd6e2032c68a31f0e10e9bbc3892c1b45ce59bfb392f619165c95cc"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/review-publishing-copilot/traces/evidence-preflight.json",
+      "digest": {
+        "sha256": "41798c1c693b3e53e85bfac27fcbc8215981c60095150f57bc191534275fe7ae"
+      }
+    },
+    {
+      "name": "plugins/torizon-app-hub/skills/review-publishing-copilot/traces/public-preview-redaction.json",
+      "digest": {
+        "sha256": "2834bc3a6a4263b2616d3464f390168579acaf1961da1559da2a06884904a8e3"
+      }
+    },
+    {
+      "name": "torizon-app-hub-codex.zip",
+      "digest": {
+        "sha256": "8020bc891ed0a63b32957852a615fbc4a31c5f89101ce3448c5ab10c3f790b55"
+      }
+    }
+  ],
+  "predicateType": "https://slsa.dev/provenance/v1",
+  "predicate": {
+    "buildDefinition": {
+      "buildType": "https://tznapphub.link/build/ai-plugin-package/v1",
+      "externalParameters": {
+        "packageId": "torizon-app-hub-openai-codex",
+        "releaseProfileId": "source-implemented"
+      },
+      "internalParameters": {
+        "networkAccess": false
+      },
+      "resolvedDependencies": [
+        {
+          "uri": "git+https://github.com/leograba/torizon-app-hub",
+          "digest": {
+            "gitCommit": "15b51ee86bab6082f0cdddc5abcc34fd4b0e1f83"
+          }
+        },
+        {
+          "uri": "file:agent-plugins/torizon-app-hub/plugin.manifest.json",
+          "digest": {
+            "sha256": "ad72266ef946e664a1c629d3915d4ce43b30be94120114b196fc3d8260010520"
+          }
+        },
+        {
+          "uri": "file:agent-plugins/torizon-app-hub/release-profiles/source-implemented.json",
+          "digest": {
+            "sha256": "9b10ed3bbf0f502890d81e3a8dbf2a011528c98b600a7a6ef1d7da3cf4b1a54f"
+          }
+        }
+      ]
+    },
+    "runDetails": {
+      "builder": {
+        "id": "https://tznapphub.link/builders/repository-local"
+      },
+      "metadata": {
+        "invocationId": null,
+        "startedOn": null,
+        "finishedOn": "2026-09-13T22:19:10-03:00"
+      },
+      "byproducts": [
+        {
+          "name": "build-evidence",
+          "content": {
+            "schemaVersion": "1.0.0",
+            "packageId": "torizon-app-hub-openai-codex",
+            "releaseProfileId": "source-implemented",
+            "sourceCommit": "15b51ee86bab6082f0cdddc5abcc34fd4b0e1f83",
+            "contractDigest": "ad72266ef946e664a1c629d3915d4ce43b30be94120114b196fc3d8260010520",
+            "releaseProfileDigest": "9b10ed3bbf0f502890d81e3a8dbf2a011528c98b600a7a6ef1d7da3cf4b1a54f",
+            "workspaceDirty": false,
+            "untrackedFiles": 0,
+            "cleanBoundary": "tracked-and-untracked",
+            "localConformance": "not-verified",
+            "evidenceRun": null,
+            "blocker": "immutable-test-evidence-not-supplied",
+            "deploymentVerified": false,
+            "modelHostVerified": false,
+            "marketplaceApproved": false,
+            "humanApproved": false
+          }
+        }
+      ]
+    }
+  }
+}
